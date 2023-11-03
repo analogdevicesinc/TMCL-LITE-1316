@@ -1,33 +1,15 @@
 /*******************************************************************************
-  Project: stepRocker Mini-TMCL (for stepRocker TMCM-1316)
-
-  Module:  TMC5160.h
-           TMC5160 library
-
-   Copyright (C) 2018 TRINAMIC Motion Control GmbH & Co KG
-                      Waterloohain 5
-                      D - 22769 Hamburg, Germany
-                      http://www.trinamic.com/
-
-   This program is free software; you can redistribute it and/or modify it
-   freely.
-
-   This program is distributed "as is" in the hope that it will be useful, but
-   WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-   or FITNESS FOR A PARTICULAR PURPOSE.
+* Copyright © 2018 TRINAMIC Motion Control GmbH & Co. KG
+* (now owned by Analog Devices Inc.),
+*
+* Copyright © 2023 Analog Devices Inc. All Rights Reserved. This software is
+* proprietary & confidential to Analog Devices, Inc. and its licensors.
 *******************************************************************************/
 
 /**
-  \file TMC5160.h
-  \author Trinamic Motion Control GmbH & Co KG
-  \version 1.00
-
-  \brief TMC5160 Motor driver functions
-
   This file provides all functions needed for easy
   access to the TMC5160 stepper motor driver IC.
 */
-
 
 #ifndef __TMC5160_H
 #define __TMC5160_H

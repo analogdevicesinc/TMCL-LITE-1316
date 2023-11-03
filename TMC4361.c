@@ -1,33 +1,15 @@
 /*******************************************************************************
-  Project: stepRocker Mini-TMCL (for stepRocker servo (TMCM-1111))
-
-  Module:  TMC4361.c
-           TMC4361 library
-
-   Copyright (C) 2018 TRINAMIC Motion Control GmbH & Co KG
-                      Waterloohain 5
-                      D - 22769 Hamburg, Germany
-                      http://www.trinamic.com/
-
-   This program is free software; you can redistribute it and/or modify it
-   freely.
-
-   This program is distributed "as is" in the hope that it will be useful, but
-   WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
-   or FITNESS FOR A PARTICULAR PURPOSE.
+* Copyright © 2018 TRINAMIC Motion Control GmbH & Co. KG
+* (now owned by Analog Devices Inc.),
+*
+* Copyright © 2023 Analog Devices Inc. All Rights Reserved. This software is
+* proprietary & confidential to Analog Devices, Inc. and its licensors.
 *******************************************************************************/
 
 /**
-  \file TMC4361.c
-  \author Trinamic Motion Control GmbH & Co KG
-  \version 1.00
-
-  \brief TMC4361 Ramp generator functions
-
   This file provides all functions needed for easy
   access to the TMC4361 stepper motor driver IC.
 */
-
 
 #include <stdlib.h>
 #if defined(MK20DX128)
@@ -270,7 +252,7 @@ void InitTMC43xx(void)
                       |TMC43xx_SPIOUT_ENABLE_SHADOW_DATAGRAMS
                       |TMC43xx_SPIOUT_COVER_DONE_NOT_FOR_CURRENT);
 
-    WriteTMC43xxInt(i, TMC43xx_EVENT_CLR_CONF, ~TMC43xx_EV_COVER_DONE);  //Lesen des Event-Registers l�scht nur das Cover-Done-Bit
+    WriteTMC43xxInt(i, TMC43xx_EVENT_CLR_CONF, ~TMC43xx_EV_COVER_DONE);  //Lesen des Event-Registers löscht nur das Cover-Done-Bit
     ReadTMC43xxInt(i, TMC43xx_EVENTS);
     WriteTMC43xxBytes(i, TMC43xx_COVER_HIGH, 0, 0, 0, 0);
     WriteTMC43xxInt(i, TMC43xx_COVER_LOW, 0);
